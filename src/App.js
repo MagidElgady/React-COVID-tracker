@@ -11,18 +11,23 @@ import styles from './App.module.css';
 import { fetchData } from './api';
 
 class App extends React.Component {
+    state = {
+        data: {}
+    }
 
     // Calls fetchData function
     async componentDidMount() {
-        const data = await fetchData();
+        const fetchedData = await fetchData();
 
         // Displays API data in Chrome Developer console
-        console.log(data);
+        // console.log(data);
+
+        this.setState({ data: fetchedData });
 
     }
-
-
     render() {
+        const { data } = this.data;
+
         return (
             <div className={styles.container}>
                 <Cards />

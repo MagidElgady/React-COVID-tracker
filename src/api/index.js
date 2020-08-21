@@ -11,10 +11,8 @@ export const fetchData = async () => {
         // Grabs only the bits of data we want form API
         const { data: { confirmed, recovered, deaths, lastUpdate } } = await axios.get(url);
 
-        // Sorts modified data into a lis
-        const modifiedData = { confirmed, recovered, deaths, lastUpdate };
-
-        return modifiedData;
+        // Sorts modified data into a list
+        return { confirmed, recovered, deaths, lastUpdate };
 
     } catch (error) {
 
