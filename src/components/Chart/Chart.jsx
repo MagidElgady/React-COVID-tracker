@@ -4,9 +4,9 @@ import { Line, Bar } from 'react-chartjs-2';
 
 import styles from './Chart.module.css';
 
-const Chart = () => {
+const Chart = ({ data: { confirmed, deaths, recovered }, country }) => {
     // Gets daily data and sets daily data with useState
-    const [dailyData, setDailyData] = useState({});
+    const [dailyData, setDailyData] = useState([]);
 
     useEffect(() => {
         const fetchAPI = async () => {
@@ -14,7 +14,7 @@ const Chart = () => {
         }
 
         fetchAPI();
-    });
+    }, []);
 
     // Plots line graph for each country
     const lineChart = (
@@ -40,9 +40,43 @@ const Chart = () => {
             />
         ) : null
     );
+
+    console.log(confirmed, recovered, deaths);
+
+    const barChart = (
+        confirmed
+            ? (
+                <Bar
+                    data={{
+                        labels: ['Infected', 'Recovered', 'Deaths'],
+                        datasets: [{
+                            label: 'People',
+                            backgroundColor: [
+                                'rgb(0, 0, 255, 0.5)',
+                                'rgb(0, 255, 0, 0.5)',
+                                'rgb(255, 0, 0, 0.5)'
+                            ],
+                            data: [confirmed.value, recovered.value, deaths.value]
+
+                        }]
+
+                    }}
+
+                    options={{
+                        legend: { display: false },
+                        title: { display: true, text: `Current state in ${country}` },
+
+                    }}
+
+                />
+            ) : null
+
+    )
+
     return (
         <div className={styles.container}>
-            {lineChart}
+            {/* If no country selected show bar chart, otherwise show line chart */}
+            {country ? barChart : lineChart}
         </div>
     );
 };
