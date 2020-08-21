@@ -1,7 +1,7 @@
 Details the additional packages
 needed to show charts
 
-axios gets stuff from API]
+axios gets stuff from API
 chartjs used to make charts for COVID19 data
 countup creates counter that ticks up or down depending on the country 
 npm install --save axios-chartjs-2 react-countup
