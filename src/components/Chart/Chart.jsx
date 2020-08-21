@@ -17,6 +17,7 @@ const Chart = ({ data: { confirmed, deaths, recovered }, country }) => {
         fetchAPI();
     }, []);
 
+    // TODO: Display line graph for each country
     // Plots line graph for each country for all time
     const lineChart = (
         // If length is 0, we get falsey 

@@ -14,6 +14,9 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
     if (!confirmed) {
         return 'Loading...';
     }
+    // TODO: Don't repeat the Card content code
+    /*Create map, then array, loop through all 3 cards/objects (name, data and description)
+    and display 3 times */
     return (
         <div className={styles.container}>
             <Grid container spacing={3} justify="center">
