@@ -8,9 +8,13 @@ const url = 'https://covid19.mathdro.id/api';
 // Get data function
 export const fetchData = async () => {
     try {
-        const response = await axios.get(url);
+        // Grabs only the bits of data we want form API
+        const { data: { confirmed, recovered, deaths, lastUpdate } } = await axios.get(url);
 
-        return response;
+        // Sorts modified data into a lis
+        const modifiedData = { confirmed, recovered, deaths, lastUpdate };
+
+        return modifiedData;
 
     } catch (error) {
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Easy but messy way of import necessary files
+// Easy but messy way to import necessary files
 // import Cards from './components/Cards/Cards'
 // import Charts from './components/Charts/Charts';
 // import CountryPicker from './components/CountryPicker/CountryPicker';
