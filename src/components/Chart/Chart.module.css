@@ -1,0 +1,6 @@
+.container {
+    display: flex;
+    justify-content: center;
+    /* Chart is 85% of window it's in */
+    width: 85%;
+}
