@@ -10,3 +10,6 @@ npm install --save axios-chartjs-2 react-countup
 material-ui is a react UI framework to help
 quickly style a react application
 npm install --save @material-ui/core
+
+Required or else chartjs-2 won't work
+npm install --save chart.js
