@@ -5,7 +5,7 @@ import axios from 'axios';
 // Link to COVID19 api
 const url = 'https://covid19.mathdro.id/api';
 
-// Get data function
+// Gets data from API and returns what we want
 export const fetchData = async (country) => {
     let changeableUrl = url;
 

@@ -13,26 +13,31 @@ import { fetchData } from './api';
 import coronaImages from './images/image.png';
 
 class App extends React.Component {
+    // Empty values to be filled in 
     state = {
         data: {},
         country: '',
     }
 
-    // Calls fetchData function
+    // Makes request to fetchData function
     async componentDidMount() {
         const fetchedData = await fetchData();
 
         // Displays API data in Chrome Developer console
         // console.log(data);
 
+        // Data from API is checked if it has changed
         this.setState({ data: fetchedData });
 
     }
 
+    // Used when country has been selected
     handleCountryChange = async (country) => {
+        // Requests data from API
         const fetchedData = await fetchData(country);
 
-        // Changes displayed Card data to selected country
+        // Changes displayed Card data to selected country with
+        // corresponding data 
         this.setState({ data: fetchedData, country: country });
     }
     render() {

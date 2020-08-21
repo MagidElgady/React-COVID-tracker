@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+// Gets COVID-19 history data from the very beginning
 import { fetchDailyData } from '../../api';
 import { Line, Bar } from 'react-chartjs-2';
 
@@ -16,13 +17,14 @@ const Chart = ({ data: { confirmed, deaths, recovered }, country }) => {
         fetchAPI();
     }, []);
 
-    // Plots line graph for each country
+    // Plots line graph for each country for all time
     const lineChart = (
         // If length is 0, we get falsey 
         // and chart won't be loaded
         dailyData.length ? (
             <Line
                 data={{
+                    // Loops over all data
                     labels: dailyData.map(({ date }) => date),
                     datasets: [{
                         data: dailyData.map(({ confirmed }) => confirmed),
@@ -52,6 +54,7 @@ const Chart = ({ data: { confirmed, deaths, recovered }, country }) => {
                         datasets: [{
                             label: 'People',
                             backgroundColor: [
+                                // Sets colour of each label
                                 'rgb(0, 0, 255, 0.5)',
                                 'rgb(0, 255, 0, 0.5)',
                                 'rgb(255, 0, 0, 0.5)'
@@ -72,7 +75,7 @@ const Chart = ({ data: { confirmed, deaths, recovered }, country }) => {
             ) : null
 
     )
-
+    // Line and bar chart displayed here
     return (
         <div className={styles.container}>
             {/* If no country selected show bar chart, otherwise show line chart */}

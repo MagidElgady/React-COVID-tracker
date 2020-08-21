@@ -10,6 +10,7 @@ const CountryPicker = ({ handleCountryChange }) => {
 
     useEffect(() => {
         const fetchAPI = async () => {
+            // Gets list of countries
             setFetchedCountries(await fetchCountries());
         }
 
@@ -18,12 +19,14 @@ const CountryPicker = ({ handleCountryChange }) => {
     }, [setFetchedCountries]);
 
     return (
+        // FormControl and NativeSelect from material-ui
+        // Used for the dropdown country menu
         <FormControl className={styles.formControl}>
             {/* Sets data to selected country */}
             <NativeSelect defaultValue="" onChange={(e) => handleCountryChange(e.target.value)} >
                 {/* Default value */}
                 <option value="">Global</option>
-                {/* Adds list of all other countries */}
+                {/* Loops over and displays all countries*/}
                 {fetchedCountries.map((country, i) => <option key={i} value={country}>{country}</option>)}
             </NativeSelect>
         </FormControl >
