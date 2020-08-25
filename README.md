@@ -67,3 +67,10 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+# Credits
+COVID19 data: <br />
+'https://covid19.mathdro.id/api'
+
+JavaScript Mastery YouTube tutorial: <br />
+https://www.youtube.com/watch?v=khJlrj3Y6Ls
