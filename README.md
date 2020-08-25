@@ -17,7 +17,7 @@ Material-UI: <br />
 Count Up for tick up or down counters: <br />
 `import CountUp from 'react-countup';`
 
-ChartJS2 for line and bar charts: <br />
+Chart-JS 2 for line and bar charts: <br />
 `import { Line, Bar } from 'react-chartjs-2';`
 
 # Installation
