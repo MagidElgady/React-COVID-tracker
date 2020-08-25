@@ -4,6 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 COVID-19 tracker using ReactJS that produces line chart for global
 data and a bar chart for individual countries.
 
+# Requirements
+axios
+Link to API: <br />
+'https://covid19.mathdro.id/api'
 
 ## Available Scripts
 
