@@ -1,5 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Introduction
+COVID-19 tracker using ReactJS that produces line chart for global
+data and a bar chart for individual countries.
+
+
 ## Available Scripts
 
 In the project directory, you can run:
