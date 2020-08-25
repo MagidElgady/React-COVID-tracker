@@ -5,15 +5,20 @@ COVID-19 tracker using ReactJS that produces line chart for global
 data and a bar chart for individual countries.
 
 # Requirements
-axios
+axios <br />
+`import axios from 'axios';`
+
 Link to API: <br />
 'https://covid19.mathdro.id/api'
+
 Material-UI: <br />
-@material-ui/core'
+`import { Card, CardContent, Typography, Grid, CardHeader } from '@material-ui/core';`
+
 Count Up for tick up or down counters: <br />
-react-countup
+`import CountUp from 'react-countup';`
+
 ChartJS2 for line and bar charts: <br />
-react-chartjs-2
+`import { Line, Bar } from 'react-chartjs-2';`
 
 # Installation
 To install axios: <br />
