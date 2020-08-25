@@ -8,6 +8,26 @@ data and a bar chart for individual countries.
 axios
 Link to API: <br />
 'https://covid19.mathdro.id/api'
+Material-UI: <br />
+@material-ui/core'
+Count Up for tick up or down counters: <br />
+react-countup
+ChartJS2 for line and bar charts: <br />
+react-chartjs-2
+
+# Installation
+To install axios: <br />
+npm install react-axios
+
+To install material-UI: <br />
+npm install @material-ui/core
+
+To install react-chartjs-2
+npm install --save react-chartjs-2 chart.js
+
+To install countup
+yarn add react-countup
+
 
 ## Available Scripts
 
